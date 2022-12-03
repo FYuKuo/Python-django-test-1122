@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+</head>
+<body>
+    <h1>Add Student</h1>
+    <form action="/student_post" method="post">
+        {% csrf_token %}
+        <div style="padding: 10px;">
+            <label for="cName">Name : </label>
+            <input type="text" name="cName" id="cName">
+        </div>
+
+        <div style="padding: 10px;">
+            <label for="cGender">Gender : </label>
+            <input type="radio" name="cGender" value="1">M
+            <input type="radio" name="cGender" value="0">F
+
+        </div>
+
+        <div style="padding: 10px;">
+            <label for="cBirthday">Birthday : </label>
+            <input type="date" name="cBirthday" id="cBirthday">
+        </div>
+
+        <div style="padding: 10px;">
+            <label for="cEmail">Email : </label>
+            <input type="email" name="cEmail" id="cEmail">
+        </div>
+
+        <div style="padding: 10px;">
+            <label for="cPhone">Phone : </label>
+            <input type="text" name="cPhone" id="cPhone">
+        </div>
+
+        <div style="padding: 10px;">
+            <label for="cAddr">Addr : </label>
+            <input type="text" name="cAddr" id="cAddr">
+        </div>
+
+        <input type="submit" value="送出">
+    </form>
+</body>
+</html>
